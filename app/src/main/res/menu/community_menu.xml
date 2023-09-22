@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <item
+            android:id="@+id/option_search_community"
+            android:icon="@drawable/ic_baseline_search_24"
+            android:orderInCategory="0"
+            android:title="Search"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/option_profile_community"
+            android:icon="@drawable/ic_person"
+            android:orderInCategory="1"
+            android:title="Profile"
+            app:showAsAction="ifRoom" />
+
+        <item
+            android:id="@+id/option_followingPosts_community"
+            android:icon="@drawable/ic_baseline_star_24"
+            android:orderInCategory="2"
+            android:title="Following Posts"
+            app:showAsAction="ifRoom" />
+
+        <item
+            android:id="@+id/option_Logout"
+            android:orderInCategory="3"
+            android:title="Logout"
+            app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".fragments.community.CommunityFragment">
+
+    <!-- <com.google.android.material.appbar.AppBarLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:fitsSystemWindows="true"
+         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+         <androidx.appcompat.widget.Toolbar
+             android:id="@+id/Toolbar_dashboard"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:fitsSystemWindows="true"
+             app:layout_scrollFlags="scroll|enterAlways" />
+     </com.google.android.material.appbar.AppBarLayout>-->
+
+    <ProgressBar
+
+        android:id="@+id/progressBarCommunity"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include
+            android:id="@+id/Toolbar_community"
+            layout="@layout/appbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!--       -->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Toolbar_community">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/postrecycle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:paddingBottom="@dimen/intrinsic_padding" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/dark_gradient"
+            android:gravity="center_vertical"
+            android:padding="@dimen/intrinsic_padding"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+        <!--        android:background="@drawable/posts_counter_bg"-->
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/createpost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_add_24" />
+    <!--    android:layout_margin="@dimen/large_intrinsic_padding"-->
+    <!--        android:src="@drawable/ic_add_white_48dp"-->
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

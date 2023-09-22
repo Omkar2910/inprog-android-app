@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.news.NewsFragment">
+
+    <include
+        android:id="@+id/Toolbar_news"
+        layout="@layout/appbar_layout" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorWhite"
+        android:columnCount="2"
+        android:rowCount="1">
+
+        <EditText
+            android:id="@+id/etQuery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:background="@color/colorWhite"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="Search"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="62dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:background="@color/colorWhite"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:paddingStart="20dp" />
+
+    </GridLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh_news"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp" />
+
+        <include
+            android:id="@+id/Toolbar"
+            layout="@layout/appbar_layout" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>
